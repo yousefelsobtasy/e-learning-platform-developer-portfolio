@@ -28,7 +28,7 @@ export function Hero() {
             className="text-5xl md:text-7xl font-bold leading-tight"
           >
             Building Engaging{" "}
-            <span className="text-gradient">E‑Learning Platforms</span>
+            <span className="text-accent">E‑Learning Platforms</span>
             <br />
             That Grow With You
           </motion.h1>
@@ -40,8 +40,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto"
           >
-            Freelance developer specializing in interactive learning systems, LMS development,
-            and digital training experiences.
+            Freelance developer specializing in interactive learning systems and LMS development.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -53,7 +52,7 @@ export function Hero() {
           >
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground group"
+              className="bg-primary hover:bg-accent/90 hover:text-accent-foreground group"
               asChild
             >
               <a href="#projects">

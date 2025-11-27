@@ -67,7 +67,7 @@ export function Testimonials() {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Client Testimonials</h2>
           <p className="text-xl text-muted-foreground">
-            Trusted by educators, entrepreneurs, and organizations worldwide
+            Let's see what my clients have to say .
           </p>
         </motion.div>
 
@@ -121,11 +121,10 @@ export function Testimonials() {
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    index === currentIndex
-                      ? "bg-accent w-8"
-                      : "bg-border hover:bg-muted-foreground"
-                  }`}
+                  className={`w-2 h-2 rounded-full transition-all ${index === currentIndex
+                    ? "bg-accent w-8"
+                    : "bg-border hover:bg-muted-foreground"
+                    }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
               ))}

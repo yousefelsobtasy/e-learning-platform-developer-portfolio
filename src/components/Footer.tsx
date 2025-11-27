@@ -12,17 +12,12 @@ export function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="flex flex-col md:flex-row justify-between items-center gap-4"
+          className="flex flex-col md:flex-row justify-center items-center gap-4"
         >
           <div className="text-center md:text-left">
             <p className="text-sm text-muted-foreground">
-              © {currentYear} E-Learn Dev. All rights reserved.
+              © {currentYear} Yousef El-sobtasy. All rights reserved.
             </p>
-          </div>
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <span>Built with</span>
-            <Heart className="w-4 h-4 text-accent fill-accent animate-pulse" />
-            <span>for educators worldwide</span>
           </div>
         </motion.div>
       </div>

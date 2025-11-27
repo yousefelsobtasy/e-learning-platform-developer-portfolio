@@ -32,7 +32,7 @@ export function About() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" ref={ref} className="py-24 px-4 bg-secondary/30">
+    <section id="about" ref={ref} className="py-24 px-4 bg-secondary">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -42,13 +42,14 @@ export function About() {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">About Me</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            I'm a passionate developer with 5+ years of experience creating innovative e-learning
-            solutions. I help entrepreneurs, educators, and organizations build platforms that make
-            learning engaging and accessible.
-          </p>
+            Thinking about moving your course online but overwhelmed by the technical side?<br /> I specialize in creating intuitive platforms
+            where publishing your content is straightforward and stress-free.
+            Just use the tools you already know - video recordings and text materials - and
+            I'll provide the system that makes them accessible to students everywhere. No complex software to learn,
+            no technical barriers - just pure teaching, amplified.          </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skills.map((skill, index) => (
             <motion.div
               key={skill.title}
@@ -67,10 +68,10 @@ export function About() {
               </Card>
             </motion.div>
           ))}
-        </div>
+        </div> */}
 
         {/* Timeline */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5, delay: 0.5 }}
@@ -115,7 +116,7 @@ export function About() {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

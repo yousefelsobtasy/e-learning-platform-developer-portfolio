@@ -8,10 +8,8 @@ import { Mail, Linkedin, Github, Twitter } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const socialLinks = [
-  { icon: Mail, label: "Email", href: "mailto:hello@example.com" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
-  { icon: Github, label: "GitHub", href: "https://github.com" },
-  { icon: Twitter, label: "Twitter", href: "https://twitter.com" },
+  { icon: Mail, label: "Email", href: "mailto:yousefelsobtasy1@gmail.com" },
+  { icon: Twitter, label: "Twitter", href: "https://x.com/yousefelsbotasy" },
 ];
 
 export function Contact() {
@@ -23,14 +21,52 @@ export function Contact() {
     email: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Replace with your FormSubmit.co email
+  const FORM_SUBMIT_URL = "https://formsubmit.co/yousefelsobtasy1@gmail.com";
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
-    });
-    setFormData({ name: "", email: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch(FORM_SUBMIT_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          // Optional: Prevent FormSubmit.co from redirecting
+          _subject: `New Contact Form Submission from ${formData.name}`,
+          _captcha: "false", // Disable captcha (optional)
+          _template: "table", // Email template style
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thanks for reaching out. I'll get back to you soon.",
+          variant: "default",
+        });
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -80,6 +116,7 @@ export function Contact() {
                     onChange={handleChange}
                     placeholder="Your name"
                     required
+                    disabled={isSubmitting}
                     className="border-border focus:border-accent"
                   />
                 </div>
@@ -98,6 +135,7 @@ export function Contact() {
                     onChange={handleChange}
                     placeholder="your.email@example.com"
                     required
+                    disabled={isSubmitting}
                     className="border-border focus:border-accent"
                   />
                 </div>
@@ -116,14 +154,16 @@ export function Contact() {
                     placeholder="Tell me about your project..."
                     rows={5}
                     required
+                    disabled={isSubmitting}
                     className="border-border focus:border-accent"
                   />
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                  disabled={isSubmitting}
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground disabled:opacity-50"
                 >
-                  Send Message
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </Card>

@@ -8,7 +8,7 @@ const navItems = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
   { name: "Projects", href: "#projects" },
-  { name: "Testimonials", href: "#testimonials" },
+  // { name: "Testimonials", href: "#testimonials" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -23,9 +23,9 @@ export function Navigation() {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="font-bold text-xl text-primary"
+            className="font-bold text-xl text-accent cursor-pointer"
           >
-            E-Learn Dev
+            Yousef El-sobtasy
           </motion.div>
 
           {/* Desktop Navigation */}

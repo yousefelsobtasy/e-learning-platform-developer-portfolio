@@ -11,37 +11,37 @@
     /* Light Theme - Professional E-Learning Brand */
     --background: 210 40% 98%;
     --foreground: 220 64% 20%;
-    
+
     --card: 0 0% 100%;
     --card-foreground: 220 64% 20%;
-    
+
     --popover: 0 0% 100%;
     --popover-foreground: 220 64% 20%;
-    
+
     --primary: 220 64% 33%;
     --primary-foreground: 0 0% 100%;
-    
+
     --secondary: 210 40% 94%;
     --secondary-foreground: 220 64% 20%;
-    
+
     --accent: 48 96% 53%;
     --accent-foreground: 220 64% 20%;
-    
+
     --success: 158 64% 52%;
     --success-foreground: 0 0% 100%;
-    
+
     --muted: 210 40% 96%;
     --muted-foreground: 220 20% 50%;
-    
+
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    
+
     --border: 220 13% 91%;
     --input: 220 13% 91%;
     --ring: 220 64% 33%;
-    
+
     --radius: 0.75rem;
-    
+
     /* Custom gradient for hero */
     --gradient-hero: linear-gradient(135deg, hsl(220, 64%, 33%) 0%, hsl(220, 64%, 45%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(48, 96%, 53%) 0%, hsl(48, 96%, 65%) 100%);
@@ -51,35 +51,35 @@
     /* Dark Theme - Modern Tech Aesthetic */
     --background: 215 28% 7%;
     --foreground: 210 40% 98%;
-    
+
     --card: 217 33% 12%;
     --card-foreground: 210 40% 98%;
-    
+
     --popover: 217 33% 12%;
     --popover-foreground: 210 40% 98%;
-    
+
     --primary: 217 56% 10%;
     --primary-foreground: 210 40% 98%;
-    
+
     --secondary: 217 33% 15%;
     --secondary-foreground: 210 40% 98%;
-    
+
     --accent: 45 100% 65%;
     --accent-foreground: 217 56% 10%;
-    
+
     --success: 142 71% 45%;
     --success-foreground: 0 0% 100%;
-    
+
     --muted: 217 33% 15%;
     --muted-foreground: 215 20% 65%;
-    
+
     --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
-    
+
     --border: 217 33% 20%;
     --input: 217 33% 20%;
     --ring: 45 100% 65%;
-    
+
     --gradient-hero: linear-gradient(135deg, hsl(217, 56%, 10%) 0%, hsl(217, 56%, 20%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(45, 100%, 65%) 0%, hsl(45, 100%, 75%) 100%);
   }
@@ -89,18 +89,23 @@
   * {
     @apply border-border;
   }
-  
+
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
     font-feature-settings: 'cv11', 'ss01';
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Outfit', sans-serif;
     font-weight: 700;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
@@ -110,28 +115,29 @@
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
   }
-  
+
   .gradient-hero {
     background: var(--gradient-hero);
   }
-  
+
   .gradient-accent {
     background: var(--gradient-accent);
   }
-  
+
   .transition-smooth {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
+
   .animate-fade-in-up {
     animation: fadeInUp 0.6s ease-out;
   }
-  
+
   @keyframes fadeInUp {
     from {
       opacity: 0;
       transform: translateY(30px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
