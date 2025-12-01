@@ -43,23 +43,17 @@ export function Projects() {
   return (
     <section id="projects" ref={ref} className="py-24 px-4">
       <div className="container mx-auto max-w-6xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5 }}
+        <div
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Featured Projects</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             A showcase of e-learning platforms and educational tools I've built for clients worldwide
           </p>
-        </motion.div>
+        </div>
 
         {/* Category Filter */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+        <div
           className="flex flex-wrap justify-center gap-2 mb-12"
         >
           {/* <Filter className="w-5 h-5 text-muted-foreground mr-2" /> */}
@@ -78,16 +72,13 @@ export function Projects() {
               {category}
             </Button>
           ))}
-        </motion.div>
+        </div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project, index) => (
-            <motion.div
+            <div
               key={project.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
             >
               <Card
                 className="overflow-hidden h-full hover:shadow-xl transition-smooth group border-border hover:border-accent/50 cursor-pointer"
@@ -131,7 +122,7 @@ export function Projects() {
                   </div> */}
                 </div>
               </Card>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

@@ -34,10 +34,7 @@ export function About() {
   return (
     <section id="about" ref={ref} className="py-24 px-4 bg-secondary">
       <div className="container mx-auto max-w-6xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5 }}
+        <div
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">About Me</h2>
@@ -47,15 +44,12 @@ export function About() {
             Just use the tools you already know - video recordings and text materials - and
             I'll provide the system that makes them accessible to students everywhere. No complex software to learn,
             no technical barriers - just pure teaching, amplified.          </p>
-        </motion.div>
+        </div>
 
         {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skills.map((skill, index) => (
-            <motion.div
+            <div
               key={skill.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <Card className="p-6 h-full hover:shadow-lg transition-smooth border-border hover:border-accent/50">
                 <div className="flex flex-col items-center text-center space-y-4">
@@ -66,15 +60,12 @@ export function About() {
                   <p className="text-sm text-muted-foreground">{skill.description}</p>
                 </div>
               </Card>
-            </motion.div>
+            </div>
           ))}
         </div> */}
 
         {/* Timeline */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
+        {/* <div
           className="mt-16 max-w-3xl mx-auto"
         >
           <h3 className="text-2xl font-bold mb-8 text-center">Experience Timeline</h3>
@@ -96,11 +87,8 @@ export function About() {
                 description: "Launched career focusing on educational technology",
               },
             ].map((item, index) => (
-              <motion.div
+              <div
                 key={item.year}
-                initial={{ opacity: 0, x: -20 }}
-                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
                 className="flex gap-4"
               >
                 <div className="flex flex-col items-center">
@@ -113,10 +101,10 @@ export function About() {
                   <h4 className="text-lg font-semibold mb-1">{item.title}</h4>
                   <p className="text-muted-foreground">{item.description}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div> */}
+        </div> */}
       </div>
     </section>
   );

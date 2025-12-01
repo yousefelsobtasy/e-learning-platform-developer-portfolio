@@ -59,22 +59,16 @@ export function Testimonials() {
   return (
     <section id="testimonials" ref={ref} className="py-24 px-4 bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5 }}
+        <div
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Client Testimonials</h2>
           <p className="text-xl text-muted-foreground">
             Let's see what my clients have to say .
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+        <div
           className="relative"
         >
           <Card className="p-8 md:p-12 border-border">
@@ -138,7 +132,7 @@ export function Testimonials() {
               <ChevronRight className="w-5 h-5" />
             </Button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
